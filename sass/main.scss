@@ -2,22 +2,17 @@
 @import 'abstracts/mixins';
 @import 'abstracts/variables';
 
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
 
-@import "pages/home";
+@import 'pages/home';
 
-@import "components/button";
-@import "components/composition";
-@import "components/feature-box";
-@import "components/card";
+@import 'components/button';
+@import 'components/composition';
+@import 'components/feature-box';
+@import 'components/card';
 
-@import "layout/header";
-@import "layout/grid";
-
-
-
-
-
+@import 'layout/header';
+@import 'layout/grid';
