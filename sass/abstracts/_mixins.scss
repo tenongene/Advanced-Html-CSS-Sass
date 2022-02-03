@@ -1,15 +1,50 @@
 @mixin clearfix {
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
+   &::after {
+      content: '';
+      display: table;
+      clear: both;
+   }
 }
 
 @mixin centerDiv {
-  margin: auto;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+   margin: auto;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+}
+
+//MEDIA QUERY MANAGER
+
+// 0 - 600PX: PHONE
+// 600 - 900PX: TABLET PORTRAIT
+// 900 -1200PX: TABLET LANDSCAPE
+// [12]
+// >1800PX :  BIG DESKTOP
+
+@mixin respond-phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+}
+
+//Writing Mixin breakpoints
+// 1em =16px
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+      @media (max-width:  37.5em) { @content };
+    }
+    @if $breakpoint == tab-port {
+      @media (max-width: 56.25em) { @content };
+    }
+    @if $breakpoint == tab-land {
+      @media (max-width: 75em) { @content };
+    }
+    @if $breakpoint == big-desktop {
+      @media (min-width: 112.5rm) { @content };
+    }
+    
+
+
 }
